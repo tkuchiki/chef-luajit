@@ -35,5 +35,5 @@ end
 
 file tmp_file do
   action :delete
-  not_if { File.exists? luajit_bin }
+  only_if { File.exists? luajit_bin }
 end
